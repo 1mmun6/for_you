@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Letter</title> 
+    <link href="yellow.css" rel="stylesheet">
+</head>
+<div class="love-box">
+    <h2>Do you love me? 💜</h2>
+
+    <div class="buttons">
+        <button id="yesBtn">Yes 💜</button>
+        <button id="noBtn">No 😢</button>
+    </div>
+
+    <p id="message"></p>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const message = document.getElementById("message");
+
+// Move the No button away
+function moveButton() {
+    const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+    const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+
+noBtn.addEventListener("mouseover", moveButton);
+noBtn.addEventListener("click", moveButton);
+
+yesBtn.addEventListener("click", () => {
+    message.innerHTML = "YAYYY!! 💜 I love you so much langga! 🥰🌹";
+});
+</script>
+
+<body>
+    <div class="container">
+        <div class="letter">
+            <p class="hi">
+                Hi langga im here to tell you nga gwapa kaayo ka, im gonna tell you everyday ug unsa ka kagwapa.
+                I genuinely saying that you are very beautiful, Anyways po I am really sorry about gabii, I should have not lied and I should have spoken the truth ara oh boquet nga cute hehehe,
+                happy gf day pud diay langga mwhamwhamwahhh I LOVE YOU VERY MUCHH
+                this is for you, I hope you appreciate it langga I love youu
+                I made it violet and I hope you like it mwahh
+            </p>
+        </div>
+
+        <div class="rose">
+            <div class="flower">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+            </div>
+            <div class="leaf">
+                <div class="stem"></div>
+                <div class="leafs"></div>
+                <div class="leafs"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
